@@ -5,3 +5,15 @@
 .tab-container button{
   margin-left: 10px;
 }
+
+.grid{
+  display: grid;
+}
+.input-grid{
+  grid-template-columns: 15% 70% 100px;
+}
+.input-grid button{
+  padding: 0 !important;
+  width: 100px;
+  height: 66px;
+}

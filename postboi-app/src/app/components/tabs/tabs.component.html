@@ -9,6 +9,26 @@
       <button mat-raised-button [disabled]="tabs.length === 1" (click)="removeTab(index)">
         Remover Request
       </button>
+
+      <div class="grid input-grid">
+        <mat-form-field appearance="outline">
+          <mat-label>Request Type</mat-label>
+          <mat-select>
+            <mat-option value="GET">GET</mat-option>
+            <mat-option value="POST">POST</mat-option>
+            <mat-option value="POST">PUT</mat-option>
+            <mat-option value="POST">DELETE</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Request URL</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <button mat-raised-button>Basic</button>
+
+      </div>
+
     </mat-tab>
   </mat-tab-group>
 </div>
