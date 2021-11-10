@@ -47,6 +47,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     MatCheckboxModule,
     MatButtonModule,
     MatInputModule,
@@ -76,8 +77,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule,
-    ReactiveFormsModule
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

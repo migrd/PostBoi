@@ -12,13 +12,17 @@ import {FormControl} from '@angular/forms';
 })
 export class TabsComponent implements OnInit {
   selectAfterAdding = true;
-  tabs = ['Request'];
+  tabs = [{
+    index: 0,
+    reqType: 'GET'
+  }];
   selectedTab = new FormControl(0);
   reqType = 'GET';
-  reqUrl = null;
+  reqUrl = new FormControl('');
 
-  addTab(selectAfterAdding: boolean) {
-    this.tabs.push('New Request');
+  addTab(selectAfterAdding: boolean, index: number) {
+    this.tabs.push({index: this.tabs.indexOf(this.tabs[index]), reqType: this.reqType} );
+    console.log(this.tabs)
 
     if (selectAfterAdding) {
       this.selectedTab.setValue(this.tabs.length - 1);
