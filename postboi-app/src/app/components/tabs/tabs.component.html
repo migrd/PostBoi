@@ -1,6 +1,6 @@
 <div class="tab-container">
 
-  <mat-tab-group [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)">
+  <mat-tab-group [selectedIndex]="selectedTab.value" (selectedIndexChange)="selectedTab.setValue($event)">
     <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
 
       <button mat-raised-button (click)="addTab(selectAfterAdding)">
@@ -13,11 +13,11 @@
       <div class="grid input-grid">
         <mat-form-field appearance="outline">
           <mat-label>Request Type</mat-label>
-          <mat-select>
+          <mat-select [(value)]="reqType">
             <mat-option value="GET">GET</mat-option>
             <mat-option value="POST">POST</mat-option>
-            <mat-option value="POST">PUT</mat-option>
-            <mat-option value="POST">DELETE</mat-option>
+            <mat-option value="PUT">PUT</mat-option>
+            <mat-option value="DELETE">DELETE</mat-option>
           </mat-select>
         </mat-form-field>
 
@@ -25,7 +25,7 @@
           <mat-label>Request URL</mat-label>
           <input matInput>
         </mat-form-field>
-        <button mat-raised-button>Basic</button>
+        <button mat-raised-button (click)="makeRequest()">Basic</button>
 
       </div>
 
